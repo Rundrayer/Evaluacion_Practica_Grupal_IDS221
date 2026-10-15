@@ -1,5 +1,5 @@
 indicador,valor
-Energia_Total_Generada,2913623.55
-Demanda_total,3146866.67
-Deficit_energetico,286904.2
-Cobertura,90.88
+energia_total_kwh,2913623.55
+demanda_total_kwh,3146866.67
+deficit_total_kwh,286904.2
+cobertura_pct,90.88
