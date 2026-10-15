@@ -1,0 +1,8 @@
+# Para que git ignore archivos generados en la carga de trabajo conjunta
+__pycache__/
+*.rar
+*.zip
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
