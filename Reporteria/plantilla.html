@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>{{ titulo }}</title>
+<style>
+    body { font-family: Arial, Helvetica, sans-serif; color: #2b2b2b; max-width: 860px; margin: 30px auto; padding: 0 16px; line-height: 1.5; }
+    h1 { color: #1b5e20; border-bottom: 3px solid #1b5e20; padding-bottom: 8px; }
+    h2 { color: #1b5e20; margin-top: 28px; }
+    .periodo { color: #666; }
+    .kpis { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+    .kpi { flex: 1 1 200px; background: #eef7ee; border-left: 5px solid #2e7d32; padding: 12px; border-radius: 4px; }
+    .kpi .n { font-size: 12px; text-transform: uppercase; color: #555; }
+    .kpi .v { font-size: 26px; font-weight: bold; color: #1b5e20; }
+    .kpi .u { font-size: 12px; color: #777; }
+    .kpi.rojo { background: #fdeeee; border-color: #c0392b; } .kpi.rojo .v { color: #c0392b; }
+    img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+    .caja { padding: 10px 14px; border-radius: 4px; margin: 8px 0; }
+    .hallazgo { background: #fff4e5; border-left: 5px solid #e67e22; }
+    .reco { background: #e8f1fb; border-left: 5px solid #2980b9; }
+    .limit { background: #fff6dd; border-left: 5px solid #f1c40f; }
+    .pie { font-size: 11px; color: #777; margin-top: 34px; border-top: 1px solid #ddd; padding-top: 8px; word-break: break-all; }
+</style>
+</head>
+<body>
+    <h1>{{ titulo }}</h1>
+    <p class="periodo"><b>Periodo:</b> {{ periodo }} &nbsp;|&nbsp; <b>Generado:</b> {{ fecha_generacion }}</p>
+
+    <h2>Indicadores clave</h2>
+    <div class="kpis">
+        {% for nombre, valor, unidad in tarjetas %}
+        <div class="kpi{% if nombre == 'Déficit' %} rojo{% endif %}"><div class="n">{{ nombre }}</div><div class="v">{{ valor }}</div><div class="u">{{ unidad }}</div></div>
+        {% endfor %}
+    </div>
+
+    <h2>Gráfico</h2>
+    <img src="{{ grafico }}" alt="Generación vs demanda por sede">
+
+    <h2>Hallazgo</h2>
+    <div class="caja hallazgo">{{ hallazgo }}</div>
+
+    <h2>Recomendación</h2>
+    <div class="caja reco">{{ recomendacion }}</div>
+
+    <h2>Limitación</h2>
+    <div class="caja limit">{{ limitacion }}</div>
+
+    <div class="pie">
+    Fuente: {{ fuente }} &nbsp;|&nbsp; Registros de entrada: {{ "{:,}".format(registros) }}<br>
+    SHA-256 de la fuente: {{ sha256 }}<br>
+    Déficit = {{ definicion }}. Informe generado automáticamente por generar_reporte.py.
+</div>
+</body>
+</html>

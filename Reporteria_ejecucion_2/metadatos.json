@@ -1,0 +1,14 @@
+{
+  "fuente": "operacion_sedes.csv",
+  "registros_entrada": 1530,
+  "sha256_fuente": "095630402232146e176364ab367ab75924985f3eb64ffae25642f4d9f72e0bf2",
+  "periodo": "01/01/2026 al 19/06/2026",
+  "definicion_deficit": "suma por sede-día de max(demanda_kwh - generacion_kwh, 0)",
+  "kpis": {
+    "energia_total_kwh": 2744617.65,
+    "demanda_total_kwh": 2961376.34,
+    "deficit_total_kwh": 268600.5
+  },
+  "generado_en": "2026-10-15T12:28:11",
+  "generado_por": "generar_reporte.py"
+}
