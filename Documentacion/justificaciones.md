@@ -12,6 +12,14 @@ Se validaron 8 sedes y se excluyó 1 porque tenía coordenadas incorrectas: S09 
 
 Mostrar coordenadas erróneas puede hacer que los puntos aparezcan en lugares equivocados del mapa y causar confusión a la hora del análisis.
 
+Link Argis
+
+Vista 1
+https://www.arcgis.com/apps/mapviewer/index.html?webmap=c132faa46fbb4f038902df95cfdc6382
+
+Vista 2
+https://www.arcgis.com/apps/mapviewer/index.html?webmap=93e6272647104619ac00b3334a6eb0dd
+
 ## P3
 
 Al regenerar el informe cambian los KPIs (energía 2,913,624 kWh, demanda 3,146,867 kWh y déficit 286,904 kWh), el gráfico, el hallazgo, el periodo y la fecha, porque `generar_reporte.py` recalcula todo con Pandas desde `operacion_sedes.csv`, sin ingresar cifras a mano.
