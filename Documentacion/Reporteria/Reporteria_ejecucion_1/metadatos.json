@@ -1,5 +1,5 @@
 {
-  "fuente": "Datos/Datasets/operacion_sedes.csv",
+  "fuente": "operacion_sedes.csv",
   "registros_entrada": 1620,
   "sha256_fuente": "9c28479ba39e4204b20bacdb23341e155ad1b9d8d517338906ae540b005520cb",
   "periodo": "01/01/2026 al 29/06/2026",
@@ -9,6 +9,6 @@
     "demanda_total_kwh": 3146866.67,
     "deficit_total_kwh": 286904.2
   },
-  "generado_en": "2026-10-15T12:28:09",
+  "generado_en": "2026-10-15T20:57:10",
   "generado_por": "generar_reporte.py"
 }
